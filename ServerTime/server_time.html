@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Server Time</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="server_time.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="server_time.js"></script>
+</head>
+<body>
+
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Simple AJAX requests</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2 id="response-message-output">current server time</h2>
+        <p><a id="get-server-time" class="btn btn-lg btn-success" href="#" role="button">Get server time</a></p>
+      </div>
+
+      <div class="row">
+		<div class="form-horizontal col-xs-offset-2 col-xs-8" role="form">
+		  <div class="form-group">
+		    <label for="message-start" class="col-sm-3 control-label">Message Start</label>
+		    <div class="col-sm-9">
+		      <input type="text" class="form-control" id="message-start" placeholder="Set a custom message to display before the server time">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="message-ending" class="col-sm-3 control-label">Message Ending</label>
+		    <div class="col-sm-9">
+		      <input type="text" class="form-control" id="message-ending" placeholder="Set a custom message to display after the server time">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="pull-right">
+		      <button id="send-post" type="button" class="btn btn-primary">Set messages using AJAX</button>
+		    </div>
+		  </div>
+		</div>
+      </div>
+
+      <div class="footer">
+        <p>© Rose-Hulman</p>
+      </div>
+
+    </div> <!-- /container -->
+
+</body>
+</html>
