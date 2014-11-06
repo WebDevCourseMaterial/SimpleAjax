@@ -23,11 +23,11 @@ class ServerTime(webapp2.RequestHandler):
     self.response.out.write(json.dumps(response))
   
   def post(self):
-    startMessage = self.request.get("start")
-    endingMessage = self.request.get("ending")
+    start_message = self.request.get("start")
+    ending_message = self.request.get("ending")
     new_message = ServerTimeMessages(id=SERVER_TIME_KEY_NAME,
-                                      start_message=startMessage,
-                                      ending_message=endingMessage)
+                                      start_message=start_message,
+                                      ending_message=ending_message)
     new_message.put()
     self.response.headers['Content-Type'] = 'application/json'
     response = {"message": startMessage + str(datetime.today()) + endingMessage}
