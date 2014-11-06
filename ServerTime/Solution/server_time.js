@@ -43,4 +43,5 @@ rh.servertime.enableButtons = function() {
 
 $(document).ready(function() {
   rh.servertime.enableButtons();
+  $("#message-start").focus();
 });
